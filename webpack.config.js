@@ -4,7 +4,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: "./example"
+    static: "./example",
   },
   resolve: {
     extensions: ['.webpack.js', '.ts', '.js']

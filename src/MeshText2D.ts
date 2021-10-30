@@ -53,12 +53,19 @@ export class MeshText2D extends Text2D {
     this.mesh.position.x = ((this.canvas.width/2) - (this.canvas.textWidth/2)) + ((this.canvas.textWidth/2) * this.align.x)
     this.mesh.position.y = (- this.canvas.height/2) + ((this.canvas.textHeight/2) * this.align.y)
 
-    // manually update geometry vertices
-    this.geometry.vertices[0].x = this.geometry.vertices[2].x = -this.canvas.width/2
-    this.geometry.vertices[1].x = this.geometry.vertices[3].x = this.canvas.width/2
-    this.geometry.vertices[0].y = this.geometry.vertices[1].y = this.canvas.height/2
-    this.geometry.vertices[2].y = this.geometry.vertices[3].y = -this.canvas.height/2
-    this.geometry.verticesNeedUpdate = true
+
+
+    // manually update geometry vertices  
+    const negativeWidth = -this.canvas.width / 2;
+    const positiveWidth = this.canvas.width / 2;
+    const positiveHeight = this.canvas.height / 2;
+    const negativeHeight = -this.canvas.height / 2;
+
+    this.geometry.attributes.position.setXY(0, negativeWidth, positiveHeight);
+    this.geometry.attributes.position.setXY(1, positiveWidth, positiveHeight);
+    this.geometry.attributes.position.setXY(2, negativeWidth, negativeHeight);
+    this.geometry.attributes.position.setXY(3, positiveWidth, negativeHeight);
+    this.geometry.attributes.position.needsUpdate = true;
   }
 
 }

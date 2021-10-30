@@ -19,7 +19,7 @@ export interface TextOptions {
   verticalPadding?: number;
 }
 
-export abstract class Text2D extends THREE.Object3D {
+export abstract class   Text2D extends THREE.Object3D {
 
   public side: number;
   public antialias: boolean;
@@ -42,6 +42,7 @@ export abstract class Text2D extends THREE.Object3D {
   protected canvas: CanvasText;
 
   constructor(text = '', options: TextOptions = {}) {
+    
     super();
 
     this._align = new THREE.Vector2();

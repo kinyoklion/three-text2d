@@ -1,5 +1,5 @@
 var THREE = require('three');
-var OrbitControls = require('three-orbit-controls')(THREE);
+var OrbitControls = require("three/examples/jsm/controls/OrbitControls").OrbitControls;
 
 var THREE_Text = require('../src/index');
 
@@ -18,7 +18,7 @@ function Application (container) {
   this.camera = new THREE.PerspectiveCamera(60, WIDTH / HEIGHT, 1, 5000),
   this.camera.position.set(0, 0, 500)
 
-  this.controls = new OrbitControls(this.camera)
+  this.controls = new OrbitControls(this.camera, container)
 
   this.renderer = new THREE.WebGLRenderer({
     alpha: true,
