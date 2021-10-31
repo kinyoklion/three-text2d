@@ -5,6 +5,12 @@ three-text2d
 
 Render texture from canvas into THREE's Mesh or Sprite.
 
+This is an updated version of:
+https://github.com/gamestdio/three-text2d
+
+It was updated to support three.js r133 and newer.
+These updates were made with no regard to compatibility with previous versions.
+
 Usage
 ---
 

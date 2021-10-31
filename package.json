@@ -1,10 +1,9 @@
 {
-  "name": "three-text2d",
-  "version": "0.6.0",
+  "name": "@kinyoklion/three-text2d",
+  "version": "0.8.0",
   "description": "Render texture from canvas into THREE's Mesh or Sprite.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "author": "Endel Dreyer <endel.dreyer@gmail.com>",
   "keywords": [
     "three.js",
     "text",
@@ -13,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/gamestdio/three-text2d.git"
+    "url": "git://github.com/kinyoklion/three-text2d.git"
   },
   "scripts": {
     "start": "webpack-dev-server",
